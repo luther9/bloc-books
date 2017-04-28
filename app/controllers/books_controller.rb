@@ -3,6 +3,11 @@ class BooksController < BlocWorks::Controller
     render(:welcome, book: "Eloquent Ruby")
   end
 
+  # 3
+  def index
+    render(:index, books: Book.all)
+  end
+
   def create
     'create'
   end
