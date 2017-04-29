@@ -8,6 +8,10 @@ class BooksController < BlocWorks::Controller
     render(:index, books: Book.all)
   end
 
+  def show
+    render(:show, book: Book.find_one(1))
+  end
+
   def create
     'create'
   end

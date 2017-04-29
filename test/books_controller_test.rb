@@ -24,6 +24,11 @@ class BooksControllerTest < Test::Unit::TestCase
     assert(last_response.ok?)
   end
 
+  def test_show
+    get('books/show')
+    assert(last_response.ok?)
+  end
+
   def test_create
     get('/books/create')
     assert(last_response.ok?)
